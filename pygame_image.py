@@ -21,10 +21,13 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()
-        if key_lst[pg.K_UP]:img3_rect.move_ip(0, -1)
-        if key_lst[pg.K_DOWN]:img3_rect.move_ip(0, 1)
-        if key_lst[pg.K_LEFT]:img3_rect.move_ip(-1, 0)
-        if key_lst[pg.K_RIGHT]:img3_rect.move_ip(1, 0)
+        key_lst_l = [0, 0]
+        if key_lst[pg.K_UP]:key_lst_l[1] -= 1
+        if key_lst[pg.K_DOWN]:key_lst_l[1] += 1
+        if key_lst[pg.K_LEFT]:key_lst_l[0] -= 1
+        if key_lst[pg.K_RIGHT]:key_lst_l[0] += 1
+
+        img3_rect.move_ip(key_lst_l)
 
         screen.blit(bg_img, [-tmr, 0])
         screen.blit(bg_img_trans, [1600-tmr, 0])

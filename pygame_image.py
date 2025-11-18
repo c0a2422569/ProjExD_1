@@ -21,7 +21,7 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()
-        key_lst_l = [0, 0]
+        key_lst_l = [-1, 0]
         if key_lst[pg.K_UP]:key_lst_l[1] -= 1
         if key_lst[pg.K_DOWN]:key_lst_l[1] += 1
         if key_lst[pg.K_LEFT]:key_lst_l[0] -= 1
@@ -35,7 +35,6 @@ def main():
         screen.blit(img3, img3_rect)
         #screen.blit(img3, [300, 200])
 
-        img3_rect.move_ip(-1,0)
 
         pg.display.update()
         tmr += 1

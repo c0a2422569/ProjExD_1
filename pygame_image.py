@@ -20,9 +20,13 @@ def main():
 
         screen.blit(bg_img, [-tmr, 0])
         screen.blit(bg_img_trans, [1600-tmr, 0])
+        screen.blit(bg_img, [3200-tmr, 0])
         screen.blit(img3, [300, 200])
+
+
         pg.display.update()
         tmr += 1
+        if tmr >= 3200:tmr = 0
         clock.tick(200)
 
 if __name__ == "__main__":

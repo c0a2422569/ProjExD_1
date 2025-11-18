@@ -25,7 +25,7 @@ def main():
         if key_lst[pg.K_UP]:key_lst_l[1] -= 1
         if key_lst[pg.K_DOWN]:key_lst_l[1] += 1
         if key_lst[pg.K_LEFT]:key_lst_l[0] -= 1
-        if key_lst[pg.K_RIGHT]:key_lst_l[0] += 1
+        if key_lst[pg.K_RIGHT]:key_lst_l[0] += 2
 
         img3_rect.move_ip(key_lst_l)
 
